@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed":"#25005a","surface-variant":"#d3e4fe","on-primary-fixed-variant":"#004395","on-tertiary-container":"#fffbff","tertiary-container":"#5870c3","surface-container-lowest":"#ffffff","on-primary-container":"#fefcff","secondary-fixed":"#eaddff","secondary-fixed-dim":"#d2bbff","secondary":"#712ae2","background":"#f8f9ff","secondary-container":"#8a4cfc","on-primary":"#ffffff","on-error":"#ffffff","on-tertiary":"#ffffff","surface-tint":"#005ac2","inverse-on-surface":"#eaf1ff","surface-bright":"#f8f9ff","on-surface-variant":"#424754","on-tertiary-fixed-variant":"#264191","primary":"#0058be","surface-container-high":"#dce9ff","surface":"#f8f9ff","primary-fixed":"#d8e2ff","on-error-container":"#93000a","on-secondary-container":"#fffbff","surface-container-highest":"#d3e4fe","on-primary-fixed":"#001a42","outline-variant":"#c2c6d6","inverse-surface":"#213145","on-tertiary-fixed":"#00164e","tertiary":"#3e57a8","on-secondary-fixed-variant":"#5a00c6","error-container":"#ffdad6","outline":"#727785","error":"#ba1a1a","surface-dim":"#cbdbf5","primary-fixed-dim":"#adc6ff","tertiary-fixed":"#dce1ff","on-surface":"#0b1c30","on-secondary":"#ffffff","inverse-primary":"#adc6ff","surface-container-low":"#eff4ff","on-background":"#0b1c30","primary-container":"#2170e4","surface-container":"#e5eeff","tertiary-fixed-dim":"#b6c4ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2.5rem","gutter-desktop":"2rem","space-lg":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","margin":"1.25rem","margin-desktop":"3rem","space-md":"1rem","gutter":"1.5rem"},fontFamily:{"label-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"body-lg":["Inter"],"label-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"]},fontSize:{"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.025em",fontWeight:"700"}],"headline-xl-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"800"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-xl":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"800"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}]}}}}</script><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/skillhub-app.css">
+</head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm"><img alt="SkillHub Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAZbD8BpV7ZqlZmcv19hDdw9QOiefcA2ENurNxKLs3mWKGrNjW8wDzje4juyjtNCr0Ajxbpp2J2bClPe4UVAxp7_IfX5nZc6ozVPJvcfl-YNyZyom71wOM-irWG1r2i1ldJmuCH2FhsJyCqXOavAtoe_xMihD9O-O6pMIfQxiUJ995BUbR2y299eBtLV_D2NzaZxNkZ14kMeShSwBVzFGiFXWYXu5nzGA6hSCeDt4Cl"/><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">SkillHub</span></div><nav class="flex flex-col gap-space-xs px-space-sm mt-space-md" data-active-classes="bg-primary text-on-primary font-bold"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl transition-all bg-primary text-on-primary font-bold" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="explore-skills" href="#"><span class="material-symbols-outlined text-[20px]">explore</span><span class="font-label-lg text-label-lg">Explore Skills</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="my-skills" href="#"><span class="material-symbols-outlined text-[20px]">psychology</span><span class="font-label-lg text-label-lg">My Skills</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="learning-requests" href="#"><span class="material-symbols-outlined text-[20px]">swap_horiz</span><span class="font-label-lg text-label-lg">Learning Requests</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="learning-sessions" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-label-lg text-label-lg">Learning Sessions</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ratings-and-reviews" href="#"><span class="material-symbols-outlined text-[20px]">star</span><span class="font-label-lg text-label-lg">Ratings &amp; Reviews</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="my-profile" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span class="font-label-lg text-label-lg">My Profile</span></a></nav></div><div class="p-space-sm mb-space-sm"><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-error-container hover:text-on-error-container transition-all" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-label-lg text-label-lg">Logout</span></a></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-gutter-desktop shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md flex-1 max-w-lg"><img alt="SkillHub Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAZbD8BpV7ZqlZmcv19hDdw9QOiefcA2ENurNxKLs3mWKGrNjW8wDzje4juyjtNCr0Ajxbpp2J2bClPe4UVAxp7_IfX5nZc6ozVPJvcfl-YNyZyom71wOM-irWG1r2i1ldJmuCH2FhsJyCqXOavAtoe_xMihD9O-O6pMIfQxiUJ995BUbR2y299eBtLV_D2NzaZxNkZ14kMeShSwBVzFGiFXWYXu5nzGA6hSCeDt4Cl"/><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded-xl w-full shadow-[0_1px_3px_rgba(15,23,42,0.04)]"><span class="material-symbols-outlined text-outline text-[20px]">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search skills, peer mentors, topics..." type="text"/></div></div><div class="flex items-center gap-gutter"><div class="flex items-center gap-space-xs bg-secondary-fixed text-on-secondary-fixed px-space-md py-space-xs rounded-full font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">token</span><span>12 SkillCredits</span></div><button class="relative p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-error rounded-full"></span></button><div class="flex items-center gap-space-sm pl-space-sm cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO51iRwxNSoxzQ-frzS5lZYA6UwfSqz87QL-iK1eoSHTdat6XcStCyt2qqkTNE-YVIBT5lqMo62BJJBcIlBPNM5Ay1GYVG_QKx3ZDVjsVIrfMvriD08vY2SoDgVWJI7grpNEZf6G6KXlhaE8ZQmDOt24w-dHTkxyIDzehHFnWbaq87_CbA9dLdXEbStF_1DcbKQJZ6akl1Xb4amLzpzUObY5UHAtC7EgJKt9ub0Jo"/><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-none">Alex Rivera</span><span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 leading-none">CS &amp; Design</span></div><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div></header><main class="w-full pt-16 px-gutter-desktop py-space-lg bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Welcome & Action Header -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold bg-primary-fixed/60 px-2 py-0.5 rounded-full">Student Exchange Workspace</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Campus Network Live</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        Welcome back, Alex! <span class="inline-block hover:rotate-12 transition-transform cursor-default">👋</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Spring Semester 2025 • Computer Science &amp; Human-Computer Interaction
+      </p>
+</div>
+<!-- Quick Actions -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="flex items-center gap-space-xs bg-primary hover:bg-primary-container text-on-primary px-space-md py-2.5 rounded-xl font-label-lg text-label-lg shadow-sm hover:shadow-md transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Offer New Skill</span>
+</button>
+<button class="flex items-center gap-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface px-space-md py-2.5 rounded-xl font-label-lg text-label-lg transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">search_insights</span>
+<span>Browse Skills</span>
+</button>
+</div>
+</section>
+<!-- 4 Key Statistic Cards in one desktop row -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Stat 1: Available SkillCredits -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-fixed/30 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Available SkillCredits</span>
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">12.5</span>
+<span class="font-label-md text-label-md text-on-surface-variant">hrs balance</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-highest text-on-primary-fixed font-bold">
+<span class="material-symbols-outlined text-[14px] mr-0.5">arrow_upward</span>+2.5 hrs this month
+        </span>
+</div>
+</div>
+<!-- Stat 2: Active Learning Sessions -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-secondary-fixed/30 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Active Sessions</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">3 Scheduled</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary-container"></span>
+        Next: Tomorrow 2:00 PM
+      </p>
+</div>
+<!-- Stat 3: Incoming Requests -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-tertiary-fixed/30 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Incoming Requests</span>
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[18px]">inbox</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">4 Pending</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed font-bold">
+          2 new today
+        </span>
+</div>
+</div>
+<!-- Stat 4: Skill Rating -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-fixed/20 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Skill Rating</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">4.95</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ 5.0</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center justify-between">
+<span>Based on 38 reviews</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">100% comp.</span>
+</p>
+</div>
+</section>
+<!-- Two-Column Desktop Section (70% Left, 30% Right) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT MAIN COLUMN (70% -> 8 of 12 cols desktop) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg min-w-0">
+<!-- Pending Learning Requests Wide Table Container -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Pending Learning Requests</h2>
+<span class="px-2 py-0.5 bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm rounded-full font-bold">3 Swaps Awaiting</span>
+</div>
+<button class="font-label-md text-label-md text-primary hover:text-primary-container flex items-center gap-1 font-semibold">
+            View All History
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Wide Responsive Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l-lg">Student</th>
+<th class="py-3 px-4">Requested Skill</th>
+<th class="py-3 px-4">Offered in Exchange</th>
+<th class="py-3 px-4">Proposed Slot</th>
+<th class="py-3 px-4 rounded-r-lg text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1: Maya Chen -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-4 px-4 min-w-[180px]">
+<div class="flex items-center gap-space-xs">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Close up photographic headshot portrait of Maya Chen, an Asian female graduate student in Data Science with stylish tortoise shell glasses smiling in natural campus sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_32xkGJmeNqMvAy_Zfi3r1IHAJKV_bn68Rn2ir9dKhvMlmXlTeAZrl0SB2FOY7byjm4X2ESlGH6Q8avGPWRRbpK6Kl-jRmpE1Y2buzviOlJ-mG9t2wtK6KHDt9B8pY_CH3ZGZNidBGQUguICALwmJy5iK6RLDvs9ZIKc3A__F-zimMpumM3NhBRLAGTHIQw6zUA6f-XexH-fsPsaIuJCH687Ujh7BaHPZgWm_SVs"/>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface font-bold truncate">Maya Chen</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Data Science '26</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 min-w-[180px]">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Advanced Figma Systems</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Design Tokens &amp; Auto-Layout</span>
+</div>
+</td>
+<td class="py-4 px-4 min-w-[180px]">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container font-label-md text-label-md text-primary font-medium">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span class="truncate">ML with PyTorch</span>
+</div>
+</td>
+<td class="py-4 px-4 min-w-[130px]">
+<div class="font-body-sm text-body-sm text-on-surface font-medium">Oct 24, 3:00 PM</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">60 min slot</div>
+</td>
+<td class="py-4 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="bg-primary text-on-primary hover:bg-primary-container px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all shadow-sm">
+                      Accept
+                    </button>
+<button class="bg-surface-container text-on-surface-variant hover:bg-surface-container-high px-2.5 py-1.5 rounded-lg font-label-sm text-label-sm font-medium transition-all">
+                      Decline
+                    </button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Message Maya">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Liam O'Connor -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-4 px-4 min-w-[180px]">
+<div class="flex items-center gap-space-xs">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Portrait photograph of Liam O'Connor, an energetic college student studying bioengineering with a warm smile, wearing a navy collegiate sweater in a library setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARvu4Q3GIEkshETwhI5CsnTo5o3AO39-m0lx-77ocA6ArBBajSSm8GQ9Por9orV4ajDugAgqkoDlW-zYD8KzXohl1snbY4A8VIhg1RCE1qRt_nDF4a88fu-ooxK6fReF1FDiTZx-SAWHvyn55ZUfoyO8rhsZBwPszcGOD7qZGkeeRX8hISLrC-HS4PlkUfXlFfsDNOPP2SnQxjueEy4c7KJxb1Srg0fBc2Z0oa4Uo"/>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface font-bold truncate">Liam O'Connor</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Bioengineering '25</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 min-w-[180px]">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">React &amp; Next.js Basics</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">State Management &amp; Hooks</span>
+</div>
+</td>
+<td class="py-4 px-4 min-w-[180px]">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container font-label-md text-label-md text-primary font-medium">
+<span class="material-symbols-outlined text-[16px]">calculate</span>
+<span class="truncate">Calc III &amp; Linear Algebra</span>
+</div>
+</td>
+<td class="py-4 px-4 min-w-[130px]">
+<div class="font-body-sm text-body-sm text-on-surface font-medium">Oct 25, 11:00 AM</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">45 min slot</div>
+</td>
+<td class="py-4 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="bg-primary text-on-primary hover:bg-primary-container px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all shadow-sm">
+                      Accept
+                    </button>
+<button class="bg-surface-container text-on-surface-variant hover:bg-surface-container-high px-2.5 py-1.5 rounded-lg font-label-sm text-label-sm font-medium transition-all">
+                      Decline
+                    </button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Message Liam">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Chloe Dubois -->
+<tr class="hover:bg-surface-container/50 transition-colors group">
+<td class="py-4 px-4 min-w-[180px]">
+<div class="flex items-center gap-space-xs">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Portrait photo of Chloe Dubois, a young architecture university student with curly hair and a creative style smiling in an architecture design studio with models in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAorJouq87gbga0MnhPyS-_nrNGxlYP81aSwbRo6KK0mYEuT_etecJ_sFXiDP9DjT4-lfd2jUQ6FnL2iEcqGQl9ndJVDXGKUCZP3b3I_lDYCNfR2BhJkwq4WSGexa-Jbt1wLz1AI_6Ewpg84LZJbEstVS74Ugu8T8EZdRWEhpYKF0gMrFDcCNWnwxUa1c-cSOi26jDgJPWCcCQhOtXqMeuHv994QhojPAUqrgNRc88"/>
+<div class="min-w-0">
+<p class="font-label-lg text-label-lg text-on-surface font-bold truncate">Chloe Dubois</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Architecture '27</p>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 min-w-[180px]">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">3D Modeling in Blender</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Subdivision &amp; Lighting</span>
+</div>
+</td>
+<td class="py-4 px-4 min-w-[180px]">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container font-label-md text-label-md text-primary font-medium">
+<span class="material-symbols-outlined text-[16px]">translate</span>
+<span class="truncate">French Conversation</span>
+</div>
+</td>
+<td class="py-4 px-4 min-w-[130px]">
+<div class="font-body-sm text-body-sm text-on-surface font-medium">Oct 26, 4:30 PM</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">90 min slot</div>
+</td>
+<td class="py-4 px-4 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1.5">
+<button class="bg-primary text-on-primary hover:bg-primary-container px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all shadow-sm">
+                      Accept
+                    </button>
+<button class="bg-surface-container text-on-surface-variant hover:bg-surface-container-high px-2.5 py-1.5 rounded-lg font-label-sm text-label-sm font-medium transition-all">
+                      Decline
+                    </button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors" title="Message Chloe">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- My Teaching Skills Grid (3 Cards in a row) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">My Teaching Skills</h2>
+<span class="font-label-md text-label-md text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">3 Listed</span>
+</div>
+<button class="font-label-md text-label-md text-primary hover:text-primary-container font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+            Manage Offerings
+          </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Skill Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-primary font-bold">
+                  Active
+                </span>
+<div class="flex items-center text-primary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px] mr-0.5" style="font-variation-settings: 'FILL' 1;">star</span>
+                  4.9
+                </div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight mb-space-xs group-hover:text-primary transition-colors">
+                UI/UX Design with Figma
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Component libraries, auto-layout 5.0, interaction tokens, and usability testing.
+              </p>
+</div>
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between mt-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">24 students taught</span>
+<button class="px-2.5 py-1 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm rounded-lg transition-colors font-medium">
+                Manage
+              </button>
+</div>
+</div>
+<!-- Skill Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-high text-primary font-bold">
+                  Active
+                </span>
+<div class="flex items-center text-primary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px] mr-0.5" style="font-variation-settings: 'FILL' 1;">star</span>
+                  5.0
+                </div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight mb-space-xs group-hover:text-primary transition-colors">
+                Frontend (React &amp; Tailwind)
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                Modern component architectures, custom hooks, atomic design, and responsive systems.
+              </p>
+</div>
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between mt-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">14 students taught</span>
+<button class="px-2.5 py-1 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm rounded-lg transition-colors font-medium">
+                Manage
+              </button>
+</div>
+</div>
+<!-- Skill Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between group opacity-90">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-outline font-bold">
+                  Paused
+                </span>
+<div class="flex items-center text-primary font-label-md text-label-md font-bold">
+<span class="material-symbols-outlined text-[16px] mr-0.5" style="font-variation-settings: 'FILL' 1;">star</span>
+                  4.8
+                </div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight mb-space-xs group-hover:text-primary transition-colors">
+                Rapid Product Prototyping
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                From napkin sketches to interactive framer demos in under 48 campus sprint hours.
+              </p>
+</div>
+<div class="pt-space-sm border-t border-surface-container flex items-center justify-between mt-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">6 students taught</span>
+<button class="px-2.5 py-1 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm rounded-lg transition-colors font-medium">
+                Manage
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT RAIL (30% -> 4 of 12 cols desktop) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg min-w-0">
+<!-- Upcoming Sessions Widget -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Upcoming Sessions</h3>
+</div>
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Session 1 -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-space-xs transition-all hover:bg-surface-container">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm font-bold text-secondary uppercase tracking-wider">Tomorrow • 2:00 PM</span>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold mt-0.5">Figma Auto-Layout Deep Dive</h4>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed font-semibold">1 hr</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">person</span>
+              With Maya Chen (Teaching)
+            </p>
+<div class="pt-2 flex items-center justify-between mt-1">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">videocam</span>
+                WebRTC Room
+              </span>
+<button class="bg-primary hover:bg-primary-container text-on-primary px-3 py-1 rounded-lg font-label-sm text-label-sm font-semibold transition-all shadow-sm">
+                Join Room
+              </button>
+</div>
+</div>
+<!-- Session 2 -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-space-xs transition-all hover:bg-surface-container">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm font-bold text-on-surface-variant uppercase tracking-wider">Thursday • 5:00 PM</span>
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold mt-0.5">Intro to Python Pandas</h4>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant font-semibold">1 hr</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">school</span>
+              With Liam Patel (Learning)
+            </p>
+<div class="pt-2 flex items-center justify-between mt-1">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-outline">description</span>
+                Pre-read shared
+              </span>
+<button class="bg-surface-container-high hover:bg-surface-variant text-on-surface px-3 py-1 rounded-lg font-label-sm text-label-sm font-medium transition-colors">
+                Prep Notes
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Activity Feed -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Recent Activity</h3>
+<span class="material-symbols-outlined text-outline text-[18px]">history</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Feed Item 1 -->
+<div class="flex items-start gap-space-xs py-1.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">rate_review</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="font-body-sm text-body-sm text-on-surface leading-tight">
+<span class="font-semibold">Sara Kim</span> left a 5-star review: <span class="italic text-on-surface-variant">"Alex explained flexbox better than my professor!"</span>
+</p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 hours ago</span>
+</div>
+</div>
+<!-- Feed Item 2 -->
+<div class="flex items-start gap-space-xs py-1.5">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">credit_score</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="font-body-sm text-body-sm text-on-surface leading-tight">
+                SkillCredits received: <span class="font-semibold text-secondary">+1.5 credits</span> for mentoring in Web Fundamentals.
+              </p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Yesterday at 6:40 PM</span>
+</div>
+</div>
+<!-- Feed Item 3 -->
+<div class="flex items-start gap-space-xs py-1.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px]">handshake</span>
+</div>
+<div class="min-w-0 flex-1">
+<p class="font-body-sm text-body-sm text-on-surface leading-tight">
+                Completed swap session with <span class="font-semibold">Marcus Brody</span> (SwiftUI for Node.js).
+              </p>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 days ago</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Top Skills in High Demand on Campus Tag Cloud -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">local_fire_department</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Campus High Demand</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Trending</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+          Skills students at your university are actively seeking this week:
+        </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors cursor-pointer">
+            PyTorch ML 🔥
+          </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors cursor-pointer">
+            System Design
+          </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors cursor-pointer">
+            React Native
+          </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors cursor-pointer">
+            Linear Algebra 📚
+          </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors cursor-pointer">
+            Figma Design Systems
+          </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors cursor-pointer">
+            LeetCode Hard Algorithms
+          </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors cursor-pointer">
+            Academic Spanish
+          </span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors cursor-pointer">
+            PostgreSQL Tuning
+          </span>
+</div>
+</div>
+</div>
+</section>
+</div></main></div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/skillhub-app.js"></script>
+</body></html>

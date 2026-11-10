@@ -1,0 +1,15 @@
+/* SkillHub Bootstrap integration layer */
+:root{--sh-primary:#155eef;--sh-ink:#202b3d;--sh-muted:#667085;--sh-line:#e4e7ec}
+body{color:var(--sh-ink)}
+.sh-live-area{max-width:1240px;margin:2rem auto;padding:0 1.25rem}
+.sh-panel{background:#fff;border:1px solid var(--sh-line);border-radius:16px;padding:1.25rem;margin:1rem 0;box-shadow:0 5px 22px rgba(16,24,40,.045)}
+.sh-panel h2,.sh-panel h3{font-weight:700}
+.sh-table-wrap{overflow-x:auto}
+.sh-table{min-width:620px}
+.sh-muted{color:var(--sh-muted)}
+.sh-toast{position:fixed;right:20px;bottom:20px;z-index:1080;max-width:420px}
+.sh-action{white-space:nowrap}
+.sh-field{margin-bottom:.85rem}
+.sh-field label{font-weight:600;margin-bottom:.35rem}
+.sh-empty{padding:1.5rem;border:1px dashed #cbd5e1;border-radius:12px;text-align:center;color:#667085}
+@media(max-width:767px){.sh-live-area{padding:0 .75rem}.sh-panel{padding:1rem}}

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-fixed":"#25005a","surface-variant":"#d3e4fe","on-primary-fixed-variant":"#004395","on-tertiary-container":"#fffbff","tertiary-container":"#5870c3","surface-container-lowest":"#ffffff","on-primary-container":"#fefcff","secondary-fixed":"#eaddff","secondary-fixed-dim":"#d2bbff","secondary":"#712ae2","background":"#f8f9ff","secondary-container":"#8a4cfc","on-primary":"#ffffff","on-error":"#ffffff","on-tertiary":"#ffffff","surface-tint":"#005ac2","inverse-on-surface":"#eaf1ff","surface-bright":"#f8f9ff","on-surface-variant":"#424754","on-tertiary-fixed-variant":"#264191","primary":"#0058be","surface-container-high":"#dce9ff","surface":"#f8f9ff","primary-fixed":"#d8e2ff","on-error-container":"#93000a","on-secondary-container":"#fffbff","surface-container-highest":"#d3e4fe","on-primary-fixed":"#001a42","outline-variant":"#c2c6d6","inverse-surface":"#213145","on-tertiary-fixed":"#00164e","tertiary":"#3e57a8","on-secondary-fixed-variant":"#5a00c6","error-container":"#ffdad6","outline":"#727785","error":"#ba1a1a","surface-dim":"#cbdbf5","primary-fixed-dim":"#adc6ff","tertiary-fixed":"#dce1ff","on-surface":"#0b1c30","on-secondary":"#ffffff","inverse-primary":"#adc6ff","surface-container-low":"#eff4ff","on-background":"#0b1c30","primary-container":"#2170e4","surface-container":"#e5eeff","tertiary-fixed-dim":"#b6c4ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2.5rem","gutter-desktop":"2rem","space-lg":"1.5rem","space-sm":"0.5rem","space-xs":"0.25rem","margin":"1.25rem","margin-desktop":"3rem","space-md":"1rem","gutter":"1.5rem"},fontFamily:{"label-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"body-lg":["Inter"],"label-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-sm":["Inter"]},fontSize:{"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.025em",fontWeight:"700"}],"headline-xl-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"800"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-xl":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"800"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}]}}}}</script><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/skillhub-app.css">
+</head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm"><img alt="SkillHub Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAZbD8BpV7ZqlZmcv19hDdw9QOiefcA2ENurNxKLs3mWKGrNjW8wDzje4juyjtNCr0Ajxbpp2J2bClPe4UVAxp7_IfX5nZc6ozVPJvcfl-YNyZyom71wOM-irWG1r2i1ldJmuCH2FhsJyCqXOavAtoe_xMihD9O-O6pMIfQxiUJ995BUbR2y299eBtLV_D2NzaZxNkZ14kMeShSwBVzFGiFXWYXu5nzGA6hSCeDt4Cl"/><span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">SkillHub</span></div><nav class="flex flex-col gap-space-xs px-space-sm mt-space-md" data-active-classes="bg-primary text-on-primary font-bold"><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="explore-skills" href="#"><span class="material-symbols-outlined text-[20px]">explore</span><span class="font-label-lg text-label-lg">Explore Skills</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="my-skills" href="#"><span class="material-symbols-outlined text-[20px]">psychology</span><span class="font-label-lg text-label-lg">My Skills</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl transition-all bg-primary text-on-primary font-bold" data-path="learning-requests" href="#"><span class="material-symbols-outlined text-[20px]">swap_horiz</span><span class="font-label-lg text-label-lg">Learning Requests</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="learning-sessions" href="#"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-label-lg text-label-lg">Learning Sessions</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ratings-and-reviews" href="#"><span class="material-symbols-outlined text-[20px]">star</span><span class="font-label-lg text-label-lg">Ratings &amp; Reviews</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="my-profile" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span class="font-label-lg text-label-lg">My Profile</span></a></nav></div><div class="p-space-sm mb-space-sm"><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-xl text-on-surface-variant hover:bg-error-container hover:text-on-error-container transition-all" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-label-lg text-label-lg">Logout</span></a></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 flex items-center justify-between px-gutter-desktop shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md flex-1 max-w-lg"><img alt="SkillHub Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrAZbD8BpV7ZqlZmcv19hDdw9QOiefcA2ENurNxKLs3mWKGrNjW8wDzje4juyjtNCr0Ajxbpp2J2bClPe4UVAxp7_IfX5nZc6ozVPJvcfl-YNyZyom71wOM-irWG1r2i1ldJmuCH2FhsJyCqXOavAtoe_xMihD9O-O6pMIfQxiUJ995BUbR2y299eBtLV_D2NzaZxNkZ14kMeShSwBVzFGiFXWYXu5nzGA6hSCeDt4Cl"/><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded-xl w-full shadow-[0_1px_3px_rgba(15,23,42,0.04)]"><span class="material-symbols-outlined text-outline text-[20px]">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search skills, peer mentors, topics..." type="text"/></div></div><div class="flex items-center gap-gutter"><div class="flex items-center gap-space-xs bg-secondary-fixed text-on-secondary-fixed px-space-md py-space-xs rounded-full font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">token</span><span>12 SkillCredits</span></div><button class="relative p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2.5 h-2.5 bg-error rounded-full"></span></button><div class="flex items-center gap-space-sm pl-space-sm cursor-pointer"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO51iRwxNSoxzQ-frzS5lZYA6UwfSqz87QL-iK1eoSHTdat6XcStCyt2qqkTNE-YVIBT5lqMo62BJJBcIlBPNM5Ay1GYVG_QKx3ZDVjsVIrfMvriD08vY2SoDgVWJI7grpNEZf6G6KXlhaE8ZQmDOt24w-dHTkxyIDzehHFnWbaq87_CbA9dLdXEbStF_1DcbKQJZ6akl1Xb4amLzpzUObY5UHAtC7EgJKt9ub0Jo"/><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-none">Alex Rivera</span><span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 leading-none">CS &amp; Design</span></div><span class="material-symbols-outlined text-outline text-[18px]">expand_more</span></div></div></header><main class="w-full pt-16 px-gutter-desktop py-space-lg bg-surface min-h-screen"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Banner / Header & Quick Stats -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg mb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Campus Barter Hub</span>
+<span class="text-outline text-xs">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Semester 2 Cycle</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Learning Requests</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Manage incoming barter proposals from collegiate peers and track outbound mentorship bids. Skill exchanges preserve zero-cost peer knowledge transfer.
+      </p>
+</div>
+<!-- Live Metric Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md w-full xl:w-auto">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md min-w-[210px]">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[24px]">inbox</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-headline-md text-on-surface font-bold leading-tight">4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Pending Incoming</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md min-w-[210px]">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed shrink-0">
+<span class="material-symbols-outlined text-[24px]">outbox</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-headline-md text-on-surface font-bold leading-tight">3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Awaiting Outbound</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md min-w-[210px]">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary font-bold shrink-0">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-md text-headline-md text-on-surface font-bold leading-tight">28</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Completed Swaps</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Segmented Tab Navigation -->
+<div class="flex flex-wrap items-center justify-between gap-space-md bg-surface-container-lowest p-space-xs rounded-xl shadow-sm mb-space-lg">
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg font-label-lg text-label-lg bg-primary text-on-primary shadow-sm transition-all" id="tab-btn-incoming" onclick="switchSection('incoming')">
+<span class="material-symbols-outlined text-[18px]">call_received</span>
+<span>Incoming Requests</span>
+<span class="bg-surface-container-lowest text-primary font-label-sm text-label-sm rounded-full px-2 py-0.5 ml-1">4 New</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" id="tab-btn-outgoing" onclick="switchSection('outgoing')">
+<span class="material-symbols-outlined text-[18px]">call_made</span>
+<span>Outgoing Requests</span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm rounded-full px-2 py-0.5 ml-1">3</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" id="tab-btn-archive" onclick="showNotification('Archive view is synced with historical records.')">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Request History &amp; Archive</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">32</span>
+</button>
+</div>
+<!-- Quick Search & Actions on Bar -->
+<div class="flex items-center gap-space-sm px-space-xs">
+<div class="hidden sm:flex items-center gap-space-xs bg-surface-container-low px-space-md py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-outline text-[18px]">filter_list</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live Barter Sync</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" onclick="showNotification('Refreshed latest trade signals.')" title="Reload requests">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- SECTION 1: INCOMING REQUESTS (Default Active) -->
+<div class="flex flex-col gap-space-lg" id="section-incoming">
+<!-- Comprehensive Filter Bar -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Skill Dropdown -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-2 rounded-lg text-on-surface">
+<span class="material-symbols-outlined text-outline text-[18px]">psychology</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Skill:</span>
+<select class="bg-transparent font-label-sm text-label-sm font-semibold text-on-surface focus:outline-none cursor-pointer">
+<option>All Skills (Alex offers)</option>
+<option>Advanced React &amp; Next.js</option>
+<option>UI/UX Prototyping (Figma)</option>
+<option>System Architecture</option>
+</select>
+</div>
+<!-- Status Filter -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-2 rounded-lg text-on-surface">
+<span class="material-symbols-outlined text-outline text-[18px]">tune</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Status:</span>
+<select class="bg-transparent font-label-sm text-label-sm font-semibold text-on-surface focus:outline-none cursor-pointer">
+<option>All Pending (4)</option>
+<option>Action Required</option>
+<option>Needs Confirmation</option>
+</select>
+</div>
+<!-- Date Range Filter -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-2 rounded-lg text-on-surface">
+<span class="material-symbols-outlined text-outline text-[18px]">calendar_month</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Next 7 Days</span>
+<span class="material-symbols-outlined text-outline text-[16px]">arrow_drop_down</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sort by:</span>
+<button class="flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold hover:underline">
+<span>Priority &amp; Match Score</span>
+<span class="material-symbols-outlined text-[16px]">swap_vert</span>
+</button>
+</div>
+</div>
+<!-- Desktop Data Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant">
+<th class="py-space-md px-space-md font-label-sm text-label-sm uppercase tracking-wider">Requesting Peer</th>
+<th class="py-space-md px-space-md font-label-sm text-label-sm uppercase tracking-wider">Desired Skill (Alex)</th>
+<th class="py-space-md px-space-md font-label-sm text-label-sm uppercase tracking-wider">Offered in Exchange</th>
+<th class="py-space-md px-space-md font-label-sm text-label-sm uppercase tracking-wider">Proposed Mode &amp; Time</th>
+<th class="py-space-md px-space-md font-label-sm text-label-sm uppercase tracking-wider">Status</th>
+<th class="py-space-md px-space-md font-label-sm text-label-sm uppercase tracking-wider text-right pr-6">Direct Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/60">
+<!-- Row 1: Maya Chen -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<!-- Student Profile -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex items-start gap-space-sm">
+<div class="relative shrink-0">
+<img class="w-11 h-11 rounded-full object-cover" data-alt="Close up warm academic portrait of student Maya Chen, Asian female computer science scholar with round modern glasses smiling in modern sunlit campus library setting with books in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUFQTERhpxd8Y9rGYLH5fq49Ho7qNNE3sNwTIqGaDwnKMBDnXVfgxATNycZs0RNiu6p-UGWRKqzn8QlEsAvR7Da_YwqR_f3--2n_zAmb30EDZpCMEySRbti4aHHJYgWeXpfiHgWLjGjewMTNGqpoS-brx69CFI_d3rJGPKGz3cn5al-eITkOOU6UcmJatBqbYWsEvY0dAn9a0E79xJYf2dqOcnTiUhOCQb7jzYQaM"/>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 bg-primary text-on-primary rounded-full flex items-center justify-center text-[10px]" title="Top 5% Peer Tutor">
+<span class="material-symbols-outlined text-[10px]">workspace_premium</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Maya Chen</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-1.5 py-0.2 rounded-full font-bold">4.9 ★</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cognitive Science &amp; HCI</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">UC Berkeley • 18 Trades</span>
+</div>
+</div>
+</td>
+<!-- Desired Skill -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col gap-1 max-w-[220px]">
+<span class="font-label-md text-label-md text-on-surface font-bold">React Performance Tuning</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    useMemo, virtualized tables, and bundle optimization for thesis project.
+                  </p>
+<div class="flex items-center gap-1 mt-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span class="font-label-sm text-label-sm font-semibold">90 mins session</span>
+</div>
+</div>
+</td>
+<!-- Offered In Exchange -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col gap-1 max-w-[210px]">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-secondary font-bold truncate">Usability Testing &amp; Heuristics</span>
+</div>
+<span class="inline-flex items-center gap-1 bg-surface-container text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded w-max">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Advanced UI Researcher
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Portfolio audit + user journey map template</span>
+</div>
+</td>
+<!-- Proposed Time / Mode -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary text-[16px]">calendar_today</span>
+<span>Tomorrow, 3:30 PM</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-outline text-[16px]">videocam</span>
+<span>SkillHub Virtual Lab #4</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">GMT-7 (PST)</span>
+</div>
+</td>
+<!-- Status Badge & Note Preview -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col items-start gap-2">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider px-2.5 py-1 rounded-full font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+                    Action Required
+                  </span>
+<!-- Tooltip snippet trigger -->
+<div class="group/msg relative cursor-pointer">
+<div class="flex items-center gap-1 text-primary hover:text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span>
+<span class="font-label-sm text-label-sm font-semibold">Read Note</span>
+</div>
+<div class="absolute left-0 top-6 z-30 hidden group-hover/msg:block w-64 p-3 bg-surface-container-highest text-on-surface text-body-sm font-body-sm rounded-xl shadow-xl">
+                      "Hey Alex! I saw your React demo in CS162. Would love your insights on rerenders before Friday's beta launch!"
+                    </div>
+</div>
+</div>
+</td>
+<!-- Actions -->
+<td class="py-space-lg px-space-md align-top text-right pr-6">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-3.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm font-bold rounded-lg shadow-sm transition-all flex items-center gap-1" onclick="acceptExchange('Maya Chen', 'React Performance Tuning')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Accept</span>
+</button>
+<button class="px-2.5 py-1.5 bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold rounded-lg transition-colors flex items-center gap-1" onclick="proposeNewTime('Maya Chen')" title="Propose Counter Time">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Reschedule</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="openChat('Maya Chen')" title="Message Maya">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+</button>
+<button class="p-1.5 text-error hover:bg-error-container/60 rounded-lg transition-colors" onclick="declineExchange('Maya Chen')" title="Decline Request">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Liam O'Connor -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<!-- Student Profile -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex items-start gap-space-sm">
+<div class="relative shrink-0">
+<img class="w-11 h-11 rounded-full object-cover" data-alt="Portrait photo of collegiate male student Liam O'Connor with messy brown hair and blue knit sweater smiling warmly against a university architectural glass wall interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCn2cVefc5S60DHE2gWIPsoOqluZDxk3X-pPucq228HOFYnbm05nXHYnN5lmyvebAJ8IwYzikwWsb3_YeK8M79n4DBL0XcvMH5RHELZuTSw4VdVuysvvRV85kyXLPxZEIuxadnq1rkRoL-MufKsavoRLdZ8SCY7E8E-49VfsDK4ybK3KcJ60JHUsd9xC7Ck6WFuk-uQ5C1HZBzxRCVBvdLz26M-jeuslYFPbDmmQU"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Liam O'Connor</span>
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-1.5 py-0.2 rounded-full font-bold">5.0 ★</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mechanical Engineering</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">Stanford • 9 Trades</span>
+</div>
+</div>
+</td>
+<!-- Desired Skill -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col gap-1 max-w-[220px]">
+<span class="font-label-md text-label-md text-on-surface font-bold">Figma Design Systems</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    Auto-layout components and color variable tokens for an IoT dashboard.
+                  </p>
+<div class="flex items-center gap-1 mt-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span class="font-label-sm text-label-sm font-semibold">60 mins session</span>
+</div>
+</div>
+</td>
+<!-- Offered In Exchange -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col gap-1 max-w-[210px]">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-secondary font-bold truncate">3D SolidWorks &amp; Rapid CAD</span>
+</div>
+<span class="inline-flex items-center gap-1 bg-surface-container text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded w-max">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Master Practitioner
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Hardware prototyping and STEP exports</span>
+</div>
+</td>
+<!-- Proposed Time / Mode -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary text-[16px]">calendar_today</span>
+<span>Thu, Oct 24 • 11:00 AM</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-outline text-[16px]">local_library</span>
+<span>Green Library Study Rm 3B</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">In-Person Campus Swap</span>
+</div>
+</td>
+<!-- Status Badge -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col items-start gap-2">
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm uppercase tracking-wider px-2.5 py-1 rounded-full font-bold flex items-center gap-1">
+                    Needs Confirmation
+                  </span>
+<div class="group/msg relative cursor-pointer">
+<div class="flex items-center gap-1 text-primary hover:text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span>
+<span class="font-label-sm text-label-sm font-semibold">Read Note</span>
+</div>
+<div class="absolute left-0 top-6 z-30 hidden group-hover/msg:block w-64 p-3 bg-surface-container-highest text-on-surface text-body-sm font-body-sm rounded-xl shadow-xl">
+                      "Need assistance building design components that match our hardware display specs. Can bring a 3D-printed enclosure sample!"
+                    </div>
+</div>
+</div>
+</td>
+<!-- Actions -->
+<td class="py-space-lg px-space-md align-top text-right pr-6">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-3.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm font-bold rounded-lg shadow-sm transition-all flex items-center gap-1" onclick="acceptExchange('Liam O\'Connor', 'Figma Design Systems')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Accept</span>
+</button>
+<button class="px-2.5 py-1.5 bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold rounded-lg transition-colors flex items-center gap-1" onclick="proposeNewTime('Liam O\'Connor')" title="Propose Counter Time">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Reschedule</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="openChat('Liam O\'Connor')">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+</button>
+<button class="p-1.5 text-error hover:bg-error-container/60 rounded-lg transition-colors" onclick="declineExchange('Liam O\'Connor')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Chloe Dubois -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<!-- Student Profile -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex items-start gap-space-sm">
+<div class="relative shrink-0">
+<img class="w-11 h-11 rounded-full object-cover" data-alt="Expressive headshot of Chloe Dubois, French female international student in architecture with short dark curly hair and dark collared shirt sitting in modern design studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkhdY75zvVvuPe-LDjCCh1vUF6UynMcYnTRNEY08qXPdrQbcMqzSUd37Q823placu05ClAQOxN0flVl5LTtY7b4UF7RlpcZkEPnl5AxR_rKsptQRWAz3KYAqBgf-vMSvGGL00gg6ZkcQeYMIDVwDFE_E1MtFnO4Yc8MOIqcpBiBqGw-AoY2e_3yffVUBCn6ERY-mooYO1jnv8rh9d-LRLJWiJbMK-R7QOBXOzfEQ8"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Chloe Dubois</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-1.5 py-0.2 rounded-full font-bold">4.8 ★</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Architecture &amp; Urbanism</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">Columbia • 12 Trades</span>
+</div>
+</div>
+</td>
+<!-- Desired Skill -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col gap-1 max-w-[220px]">
+<span class="font-label-md text-label-md text-on-surface font-bold">Three.js / WebGL Integration</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    Hosting responsive 3D architectural floorplans on the web.
+                  </p>
+<div class="flex items-center gap-1 mt-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span class="font-label-sm text-label-sm font-semibold">120 mins deep-dive</span>
+</div>
+</div>
+</td>
+<!-- Offered In Exchange -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col gap-1 max-w-[210px]">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-secondary font-bold truncate">Rhino 3D Parametric Modeling</span>
+</div>
+<span class="inline-flex items-center gap-1 bg-surface-container text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded w-max">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Grasshopper Expert
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Algorithmic generative visual patterns</span>
+</div>
+</td>
+<!-- Proposed Time / Mode -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary text-[16px]">calendar_today</span>
+<span>Friday, Oct 25 • 2:00 PM</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-outline text-[16px]">videocam</span>
+<span>Discord Stage / ScreenShare</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">EST (New York)</span>
+</div>
+</td>
+<!-- Status Badge -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col items-start gap-2">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider px-2.5 py-1 rounded-full font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+                    Action Required
+                  </span>
+<div class="group/msg relative cursor-pointer">
+<div class="flex items-center gap-1 text-primary hover:text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span>
+<span class="font-label-sm text-label-sm font-semibold">Read Note</span>
+</div>
+<div class="absolute left-0 top-6 z-30 hidden group-hover/msg:block w-64 p-3 bg-surface-container-highest text-on-surface text-body-sm font-body-sm rounded-xl shadow-xl">
+                      "Alex, I have the GLTF model ready with lighting baking, just struggling with camera orbit controls on canvas resize!"
+                    </div>
+</div>
+</div>
+</td>
+<!-- Actions -->
+<td class="py-space-lg px-space-md align-top text-right pr-6">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-3.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm font-bold rounded-lg shadow-sm transition-all flex items-center gap-1" onclick="acceptExchange('Chloe Dubois', 'Three.js / WebGL Integration')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Accept</span>
+</button>
+<button class="px-2.5 py-1.5 bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold rounded-lg transition-colors flex items-center gap-1" onclick="proposeNewTime('Chloe Dubois')" title="Propose Counter Time">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Reschedule</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="openChat('Chloe Dubois')">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+</button>
+<button class="p-1.5 text-error hover:bg-error-container/60 rounded-lg transition-colors" onclick="declineExchange('Chloe Dubois')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Brandon Wu -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<!-- Student Profile -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex items-start gap-space-sm">
+<div class="relative shrink-0">
+<img class="w-11 h-11 rounded-full object-cover" data-alt="Square portrait of Brandon Wu, Taiwanese student researcher with short black hair and denim shirt working on laptop in bright high-tech university maker space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMwKpwzyQT9r8cM-0apyg2W3IWNn7OUc6Qt646FPv60AUd7AMoQOUfrhs7KBzx9tOGaiqKofMyzul__-0I4LxawsuRpPGUDXd_tMm1qtxl4DP92Ou73wAntQD_u93-dpndbTmTD3jn6B_wwJlDBw_autU1B-Vzw1xk25klKme6f-F1H-4CG-SsW715zgdxjMCKkot_WWZDJAJKicXSNUue4Ukr_tSMBanxps7ZqYw"/>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">Brandon Wu</span>
+<span class="bg-surface-container-high text-on-surface font-label-sm text-label-sm px-1.5 py-0.2 rounded-full font-bold">4.7 ★</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Data Science &amp; Stats</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">MIT • 6 Trades</span>
+</div>
+</div>
+</td>
+<!-- Desired Skill -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col gap-1 max-w-[220px]">
+<span class="font-label-md text-label-md text-on-surface font-bold">Tailwind &amp; Responsive CSS</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                    Turning ML prediction dashboards into clean mobile-first views.
+                  </p>
+<div class="flex items-center gap-1 mt-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span class="font-label-sm text-label-sm font-semibold">45 mins sprint</span>
+</div>
+</div>
+</td>
+<!-- Offered In Exchange -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col gap-1 max-w-[210px]">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-secondary font-bold truncate">PyTorch / Linear Regression</span>
+</div>
+<span class="inline-flex items-center gap-1 bg-surface-container text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded w-max">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Intermediate Data Analyst
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Data cleaning pipelines &amp; Jupyter notebooks</span>
+</div>
+</td>
+<!-- Proposed Time / Mode -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface font-semibold">
+<span class="material-symbols-outlined text-primary text-[16px]">calendar_today</span>
+<span>Sat, Oct 26 • 10:00 AM</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-outline text-[16px]">videocam</span>
+<span>SkillHub Virtual Lab #1</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">EST (Boston)</span>
+</div>
+</td>
+<!-- Status Badge -->
+<td class="py-space-lg px-space-md align-top">
+<div class="flex flex-col items-start gap-2">
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm uppercase tracking-wider px-2.5 py-1 rounded-full font-bold flex items-center gap-1">
+                    Needs Confirmation
+                  </span>
+<div class="group/msg relative cursor-pointer">
+<div class="flex items-center gap-1 text-primary hover:text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[16px]">chat_bubble_outline</span>
+<span class="font-label-sm text-label-sm font-semibold">Read Note</span>
+</div>
+<div class="absolute left-0 top-6 z-30 hidden group-hover/msg:block w-64 p-3 bg-surface-container-highest text-on-surface text-body-sm font-body-sm rounded-xl shadow-xl">
+                      "Need some quick guidance on Tailwind grid layout break points for our hackathon project demo!"
+                    </div>
+</div>
+</div>
+</td>
+<!-- Actions -->
+<td class="py-space-lg px-space-md align-top text-right pr-6">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-3.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm font-bold rounded-lg shadow-sm transition-all flex items-center gap-1" onclick="acceptExchange('Brandon Wu', 'Tailwind &amp; Responsive CSS')">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Accept</span>
+</button>
+<button class="px-2.5 py-1.5 bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm font-semibold rounded-lg transition-colors flex items-center gap-1" onclick="proposeNewTime('Brandon Wu')" title="Propose Counter Time">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Reschedule</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-lg transition-colors" onclick="openChat('Brandon Wu')">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+</button>
+<button class="p-1.5 text-error hover:bg-error-container/60 rounded-lg transition-colors" onclick="declineExchange('Brandon Wu')">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing 4 of 4 pending barter submissions</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm disabled:opacity-40" disabled="">Previous</button>
+<span class="px-2.5 py-1 bg-surface-container-lowest rounded font-label-sm text-label-sm font-bold text-primary shadow-sm">1</span>
+<button class="px-3 py-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm disabled:opacity-40" disabled="">Next</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: OUTBOUND LEARNING REQUESTS -->
+<div class="flex flex-col gap-space-md mt-space-xl" id="section-outgoing">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Outbound Learning Requests</h2>
+<span class="bg-surface-container-high text-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">3 Active Bids</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Proposals Alex initiated with specialized mentors. Escrow SkillCredits stay reserved until accepted.
+        </p>
+</div>
+<button class="flex items-center gap-1.5 px-space-md py-2 bg-secondary text-on-secondary rounded-lg font-label-sm text-label-sm font-semibold hover:bg-secondary-container transition-all shadow-sm" onclick="showNotification('Opening Explore Directory to browse mentors...')">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Propose New Barter</span>
+</button>
+</div>
+<!-- Outbound Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant">
+<th class="py-space-md px-space-md font-label-sm text-label-sm uppercase tracking-wider">Target Peer Mentor</th>
+<th class="py-space-md px-space-md font-label-sm text-label-sm uppercase tracking-wider">Subject Matter Requested</th>
+<th class="py-space-md px-space-md font-label-sm text-label-sm uppercase tracking-wider">Alex's Barter Commitment</th>
+<th class="py-space-md px-space-md font-label-sm text-label-sm uppercase tracking-wider">Status &amp; Timeline</th>
+<th class="py-space-md px-space-md font-label-sm text-label-sm uppercase tracking-wider text-right pr-6">Management</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/60">
+<!-- Outbound Row 1: Sarah Jenkins -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Headshot of Sarah Jenkins, young female graduate AI engineer in a collegiate tech lab with natural lighting, focused confident expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvqNN7W9m0qP5yTXwumLksdIJDUpxNBhIMXPoGyHHKmVvJFqPTVTdzOTrrbvqoxbLbKn_-NW36aDsyECu3Esp89yD8yjwwk9PGw-bZxpN5s0vsJMFM6HSo3k_faeSF9uBDUtrk2s9FOiPo0D5wLqruJqIF4s1yje9Omn4pnenTKG_GSj0jiqY4juy0vgExqUlUh5ulYycMpPSN5ghzTUcF0ZFhGtU0Cg1F9IBqqYQ"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Sarah Jenkins</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">PhD Candidate, Computational Neuro</span>
+<span class="font-label-sm text-label-sm text-outline">Harvard SEAS • 4.95 ★</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Neural Networks Foundations</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Backpropagation math, tensor transforms</span>
+<span class="font-label-sm text-label-sm text-primary mt-1">1 Escrow Token reserved</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Alex offers: Full-Stack React Architecture</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Next.js App router setup + deployment</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider px-2 py-0.5 rounded-full font-bold w-max flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span>
+                    Under Review by Sarah
+                  </span>
+<span class="font-label-sm text-label-sm text-outline">Sent 2 days ago • Expires in 24h</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top text-right pr-6">
+<div class="flex items-center justify-end gap-2">
+<button class="px-2.5 py-1 bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-label-sm text-label-sm rounded-lg transition-colors flex items-center gap-1" onclick="sendReminder('Sarah Jenkins')">
+<span class="material-symbols-outlined text-[14px]">notification_important</span>
+<span>Remind</span>
+</button>
+<button class="px-2.5 py-1 text-error hover:bg-error-container/60 font-label-sm text-label-sm rounded-lg transition-colors flex items-center gap-1" onclick="withdrawRequest('Sarah Jenkins')">
+<span class="material-symbols-outlined text-[14px]">cancel</span>
+<span>Withdraw</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Outbound Row 2: Marcus Vance -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Natural casual portrait of Marcus Vance, African American college student with warm smile and laptop under arm in University student union" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbXFLufjThFSAUKfihUdwhyElfDlHUYthJPsFysS0aHA0KUussfkqPCyMmXzTzy5_gcsMpHcnD2e3LE9CKD1HJBE4m20J45GmmKGCS96PHVGOc005oxsByh0CODL0lLyCyUtikqhYW_gEdTsVajDSjSSPkt84xi1kyD6mIZ4bTGoqQQ8FGdfivezr-T_m83RsIIoEeRIwpwHVcyGifO9tfmJBT1n9pnLtIYU1G4Lg"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Marcus Vance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Applied Cybersecurity</span>
+<span class="font-label-sm text-label-sm text-outline">Georgia Tech • 4.8 ★</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">OAuth 2.0 &amp; JWT Penetration Testing</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Securing REST endpoints &amp; refresh token safety</span>
+<span class="font-label-sm text-label-sm text-primary mt-1">1 Escrow Token reserved</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Alex offers: UI Micro-Interactions (Framer Motion)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Clean component physics &amp; gestural feedback</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<span class="bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider px-2 py-0.5 rounded-full font-bold w-max flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+                    Opened 4 hours ago
+                  </span>
+<span class="font-label-sm text-label-sm text-outline">Sent yesterday • Pending Slot Pick</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top text-right pr-6">
+<div class="flex items-center justify-end gap-2">
+<button class="px-2.5 py-1 bg-surface-container-high text-on-surface hover:bg-surface-container-highest font-label-sm text-label-sm rounded-lg transition-colors flex items-center gap-1" onclick="sendReminder('Marcus Vance')">
+<span class="material-symbols-outlined text-[14px]">notification_important</span>
+<span>Remind</span>
+</button>
+<button class="px-2.5 py-1 text-error hover:bg-error-container/60 font-label-sm text-label-sm rounded-lg transition-colors flex items-center gap-1" onclick="withdrawRequest('Marcus Vance')">
+<span class="material-symbols-outlined text-[14px]">cancel</span>
+<span>Withdraw</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Outbound Row 3: Devina Kapoor -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Professional studio portrait of Devina Kapoor, South Asian female business finance student smiling in clean blazer against soft gradient campus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvaUKtXaE9TFFqPBaabi4QEamRtIbkqDMBedl6Yga7JnuNWRVuMMOCsa8YbLJMZQkLOJUmDjRF9zati8GFh4Tlj7MPWntX6YshEnIvfRRDdInAO7iTQDlPVTdGjxxgX5pDIX6edz7Nhiu_jSL1R1C64-pFndSV5FugFMIoH0AneQGkH27nFbVJ6wEp8RiF7Q6VuBNX7RPthIzoT0Fybf9GbTI8xQeJ-KE-md_4B5Q"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Devina Kapoor</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Economics &amp; Venture Capital</span>
+<span class="font-label-sm text-label-sm text-outline">Wharton Penn • 5.0 ★</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">SaaS Financial Modeling &amp; Cap Tables</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pre-seed dilution and discounted cash flows</span>
+<span class="font-label-sm text-label-sm text-primary mt-1">1 Escrow Token reserved</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Alex offers: High-Fidelity Pitch Deck Wireframes</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Investor visual storyline in Figma</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider px-2 py-0.5 rounded-full font-bold w-max flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">edit_calendar</span>
+                    Counter Proposal Sent
+                  </span>
+<span class="font-label-sm text-label-sm text-outline">Devina offered Sun 4 PM</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top text-right pr-6">
+<div class="flex items-center justify-end gap-2">
+<button class="px-2.5 py-1 bg-primary text-on-primary font-label-sm text-label-sm font-semibold rounded-lg shadow-sm transition-all flex items-center gap-1" onclick="showNotification('Accepted Devina\'s counter time for Sunday at 4:00 PM!')">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+<span>Confirm Slot</span>
+</button>
+<button class="px-2.5 py-1 text-error hover:bg-error-container/60 font-label-sm text-label-sm rounded-lg transition-colors flex items-center gap-1" onclick="withdrawRequest('Devina Kapoor')">
+<span class="material-symbols-outlined text-[14px]">cancel</span>
+<span>Withdraw</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Interactive Modal / Slide-over Simulation for 'Propose New Time' -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-center justify-center p-space-md" id="reschedule-modal">
+<div class="bg-surface-container-lowest max-w-lg w-full rounded-xl shadow-2xl p-space-lg flex flex-col gap-space-md animate-in fade-in zoom-in-95 duration-150">
+<div class="flex items-center justify-between border-b pb-space-xs border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">calendar_clock</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Propose Counter Time</h3>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded-lg" onclick="closeModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Select alternative availability slots to send to <span class="font-bold text-on-surface" id="modal-peer-name">Peer</span>.
+      </p>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Select Suggested Date</label>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2 px-3 text-center rounded-lg bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold" type="button">Thu, Oct 24</button>
+<button class="py-2 px-3 text-center rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high" type="button">Fri, Oct 25</button>
+<button class="py-2 px-3 text-center rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high" type="button">Mon, Oct 28</button>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Preferred Time Window</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 px-3 rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-between" type="button">
+<span>2:00 PM – 3:30 PM</span>
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+</button>
+<button class="py-2 px-3 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-between" type="button">
+<span>5:00 PM – 6:30 PM</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Personal Note to Peer</label>
+<textarea class="w-full p-2.5 rounded-lg bg-surface-container-low text-body-sm font-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/40" placeholder="Let them know why this time fits your schedule better..." rows="2"></textarea>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container" onclick="closeModal()">Cancel</button>
+<button class="px-space-lg py-2 rounded-lg font-label-sm text-label-sm font-bold bg-primary text-on-primary hover:bg-primary-container shadow-sm" onclick="submitReschedule()">Send Counter Proposal</button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Floating Element -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-sm px-space-md py- space-sm py-3 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-2xl font-label-md text-label-md" id="toast">
+<span class="material-symbols-outlined text-[18px] text-secondary-fixed" id="toast-icon">info</span>
+<span id="toast-text">Action completed successfully</span>
+</div>
+<!-- Inline Script for Interactive Handlers -->
+<script>
+    function showNotification(message, icon = 'check_circle') {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      const toastIcon = document.getElementById('toast-icon');
+      if (!toast) return;
+      toastText.innerText = message;
+      toastIcon.innerText = icon;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+      }, 3500);
+    }
+
+    function switchSection(tab) {
+      const inTab = document.getElementById('tab-btn-incoming');
+      const outTab = document.getElementById('tab-btn-outgoing');
+      const secIncoming = document.getElementById('section-incoming');
+      const secOutgoing = document.getElementById('section-outgoing');
+
+      if (tab === 'incoming') {
+        inTab.className = 'flex items-center gap-space-xs px-space-md py-2.5 rounded-lg font-label-lg text-label-lg bg-primary text-on-primary shadow-sm transition-all';
+        outTab.className = 'flex items-center gap-space-xs px-space-md py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all';
+        secIncoming.scrollIntoView({ behavior: 'smooth' });
+        showNotification('Viewing incoming peer requests');
+      } else if (tab === 'outgoing') {
+        outTab.className = 'flex items-center gap-space-xs px-space-md py-2.5 rounded-lg font-label-lg text-label-lg bg-primary text-on-primary shadow-sm transition-all';
+        inTab.className = 'flex items-center gap-space-xs px-space-md py-2.5 rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all';
+        secOutgoing.scrollIntoView({ behavior: 'smooth' });
+        showNotification('Scrolled to outbound requests');
+      }
+    }
+
+    function acceptExchange(student, skill) {
+      showNotification('Exchange accepted with ' + student + ' for ' + skill + '! Calendar invite dispatched.');
+    }
+
+    function declineExchange(student) {
+      if (confirm('Decline exchange request from ' + student + '? Escrow will be released back.')) {
+        showNotification('Declined proposal from ' + student + '.', 'cancel');
+      }
+    }
+
+    function proposeNewTime(student) {
+      const modal = document.getElementById('reschedule-modal');
+      const modalName = document.getElementById('modal-peer-name');
+      modalName.innerText = student;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('reschedule-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function submitReschedule() {
+      closeModal();
+      showNotification('Counter proposal sent! Peer has 48h to accept your proposed slots.');
+    }
+
+    function openChat(student) {
+      showNotification('Opening encrypted peer messenger with ' + student + '...', 'forum');
+    }
+
+    function sendReminder(tutor) {
+      showNotification('Ping reminder sent to ' + tutor + '.', 'notification_important');
+    }
+
+    function withdrawRequest(tutor) {
+      if (confirm('Are you sure you want to withdraw your learning bid to ' + tutor + '? 1 SkillCredit will be restored.')) {
+        showNotification('Withdrew request to ' + tutor + '. 1 SkillCredit returned to balance.', 'check_circle');
+      }
+    }
+  </script>
+</div></main></div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/skillhub-app.js"></script>
+</body></html>

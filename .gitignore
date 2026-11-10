@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+
+**/target/
+**/node_modules/
+**/.classpath
+**/.factorypath
+**/.project
+**/.settings/
+**/.vscode/
+**/application.properties
+**/application-local.properties
+skillexchange/
